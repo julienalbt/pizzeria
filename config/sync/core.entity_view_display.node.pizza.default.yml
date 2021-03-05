@@ -3,6 +3,7 @@ langcode: fr
 status: true
 dependencies:
   config:
+    - field.field.node.pizza.field_base_pizza
     - field.field.node.pizza.field_ingredients
     - field.field.node.pizza.field_pizza_image
     - field.field.node.pizza.field_prix
@@ -45,5 +46,6 @@ content:
     type: number_decimal
     region: content
 hidden:
+  field_base_pizza: true
   langcode: true
   links: true

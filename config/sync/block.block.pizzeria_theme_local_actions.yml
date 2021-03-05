@@ -1,0 +1,20 @@
+uuid: d1b9899c-673f-40dd-a8c3-66e3bc873f5f
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - pizzeria_theme
+_core:
+  default_config_hash: ik4PTMlBD0MWansnSMpSXq5SUlWRJ1IVVt6C7AIbQmc
+id: pizzeria_theme_local_actions
+theme: pizzeria_theme
+region: content
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Actions d''administration principales'
+  provider: core
+  label_display: '0'
+visibility: {  }

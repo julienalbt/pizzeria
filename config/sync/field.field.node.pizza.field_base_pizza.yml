@@ -1,0 +1,23 @@
+uuid: 7e998efe-1197-4dc8-b9dd-a9e07e1be262
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_base_pizza
+    - node.type.pizza
+  module:
+    - options
+id: node.pizza.field_base_pizza
+field_name: field_base_pizza
+entity_type: node
+bundle: pizza
+label: 'Base pizza'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: tomate
+default_value_callback: ''
+settings: {  }
+field_type: list_string

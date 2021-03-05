@@ -1,11 +1,11 @@
 uuid: 5b12c88a-8cdd-4127-a0ac-cfe1b2d32eaa
-name: 'Drush Site-Install'
+name: 'La pizzeria'
 mail: admin@example.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node
+  front: /liste-pizzas
 admin_compact_mode: false
 weight_select_max: 100
 langcode: fr

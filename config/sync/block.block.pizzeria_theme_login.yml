@@ -1,0 +1,22 @@
+uuid: 5d7f953e-741f-4a1b-bf74-e97bc0d27b72
+langcode: fr
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - pizzeria_theme
+_core:
+  default_config_hash: 862sIulDdHmF0vBU1s2j2_a_CwkxursrL0pIrMDzzOg
+id: pizzeria_theme_login
+theme: pizzeria_theme
+region: content
+weight: -1
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'Connexion utilisateur'
+  provider: user
+  label_display: visible
+visibility: {  }

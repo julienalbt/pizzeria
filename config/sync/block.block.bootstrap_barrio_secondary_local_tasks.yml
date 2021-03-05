@@ -1,0 +1,22 @@
+uuid: 8bd716d7-9f12-43ce-9369-b64e1bf62a2c
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - bootstrap_barrio
+_core:
+  default_config_hash: DJ7Om1C2xWr2GI8CjZaZtyWpP-0S3hRR3oROZl1oesc
+id: bootstrap_barrio_secondary_local_tasks
+theme: bootstrap_barrio
+region: top_header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Onglets secondaires'
+  provider: core
+  label_display: '0'
+  primary: false
+  secondary: true
+visibility: {  }

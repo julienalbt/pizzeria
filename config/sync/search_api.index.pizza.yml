@@ -1,0 +1,47 @@
+uuid: d823cdb2-7f0d-4064-96a2-11f598cda22c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ingredients
+    - search_api.server.default
+  module:
+    - taxonomy
+    - search_api
+    - node
+id: pizza
+name: Pizza
+description: ''
+read_only: false
+field_settings:
+  name:
+    label: 'Ingrédients » Terme de taxonomie » Nom'
+    datasource_id: 'entity:node'
+    property_path: 'field_ingredients:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_ingredients
+      module:
+        - taxonomy
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - pizza
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default

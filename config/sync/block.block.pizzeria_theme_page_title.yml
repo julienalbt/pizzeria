@@ -1,0 +1,20 @@
+uuid: cc1c07a9-99ca-407f-95dd-5c07c39ea4b6
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - pizzeria_theme
+_core:
+  default_config_hash: Z3nlZUh2mSJP3apMrJWt-duS-aLyP79rcfu_0wpPmDs
+id: pizzeria_theme_page_title
+theme: pizzeria_theme
+region: header
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titre de page'
+  provider: core
+  label_display: '0'
+visibility: {  }

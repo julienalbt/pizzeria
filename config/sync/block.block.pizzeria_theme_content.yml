@@ -1,0 +1,22 @@
+uuid: f9298e1f-f79e-4ad1-81dd-2f630c242afe
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pizzeria_theme
+_core:
+  default_config_hash: 80N66GdzEvwqi1m-_GZ-ulkk8AJG9beoXcZ4-pMVKjI
+id: pizzeria_theme_content
+theme: pizzeria_theme
+region: content
+weight: -2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenu de la page principale'
+  provider: system
+  label_display: '0'
+visibility: {  }
