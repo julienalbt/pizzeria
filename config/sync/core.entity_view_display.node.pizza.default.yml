@@ -1,0 +1,49 @@
+uuid: 4ecc4580-4f16-4e98-af07-bb956eeaab9b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.pizza.field_ingredients
+    - field.field.node.pizza.field_pizza_image
+    - field.field.node.pizza.field_prix
+    - image.style.medium
+    - node.type.pizza
+  module:
+    - image
+    - user
+id: node.pizza.default
+targetEntityType: node
+bundle: pizza
+mode: default
+content:
+  field_ingredients:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_pizza_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_prix:
+    weight: 2
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+hidden:
+  langcode: true
+  links: true

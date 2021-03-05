@@ -1,0 +1,10 @@
+uuid: eb166d83-3bf2-40bb-8653-821578bd1f78
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yoNVreoTdTZTY7GuE8fI9Jmxqdz8vlo4ZJKixMNSosw
+name: Étiquettes
+vid: tags
+description: 'Utilisez les étiquettes pour regrouper les articles sur des sujets similaires dans des catégories.'
+weight: 0

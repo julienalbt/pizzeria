@@ -1,0 +1,27 @@
+uuid: 68ce572f-a8aa-4349-9b5d-34d714ae786b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pizza.field_ingredients
+    - field.field.node.pizza.field_pizza_image
+    - field.field.node.pizza.field_prix
+    - node.type.pizza
+  module:
+    - user
+id: node.pizza.teaser
+targetEntityType: node
+bundle: pizza
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_ingredients: true
+  field_pizza_image: true
+  field_prix: true
+  langcode: true

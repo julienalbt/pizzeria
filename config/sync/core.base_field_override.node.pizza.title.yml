@@ -1,0 +1,18 @@
+uuid: 28a28960-cd4a-44c6-87bc-12fdf76eb947
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pizza
+id: node.pizza.title
+field_name: title
+entity_type: node
+bundle: pizza
+label: 'Nom de la pizza'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

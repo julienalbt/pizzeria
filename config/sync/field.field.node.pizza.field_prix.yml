@@ -1,0 +1,23 @@
+uuid: dd2aebb7-3166-4726-a4d2-18acf3110fe6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prix
+    - node.type.pizza
+id: node.pizza.field_prix
+field_name: field_prix
+entity_type: node
+bundle: pizza
+label: Prix
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' €'
+field_type: decimal

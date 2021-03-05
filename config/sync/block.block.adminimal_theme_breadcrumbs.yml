@@ -1,0 +1,22 @@
+uuid: f6eb40b3-f1fb-4a2d-91cb-0dbd0520d2da
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - adminimal_theme
+_core:
+  default_config_hash: 8by5KRsb7ZpmjHj0ms1d7xAG_xH54AWsOX6spDLJ59U
+id: adminimal_theme_breadcrumbs
+theme: adminimal_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Fils d''ariane'
+  provider: system
+  label_display: '0'
+visibility: {  }
