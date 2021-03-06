@@ -27,13 +27,12 @@ content:
       link: false
     third_party_settings: {  }
   field_pizza_image:
-    type: image
+    type: image_url
     weight: 0
     region: content
     label: hidden
     settings:
       image_style: medium
-      image_link: ''
     third_party_settings: {  }
   field_prix:
     type: number_decimal

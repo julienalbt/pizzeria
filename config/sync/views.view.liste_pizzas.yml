@@ -3,10 +3,15 @@ langcode: fr
 status: true
 dependencies:
   config:
+    - field.storage.node.field_pizza_image
+    - field.storage.node.field_prix
+    - image.style.medium
     - search_api.index.pizza
     - system.menu.admin
   module:
+    - image
     - search_api
+    - views_block_area
 id: liste_pizzas
 label: 'Liste pizzas'
 module: views
@@ -49,6 +54,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
       row:
         type: search_api
         options:
@@ -56,13 +65,10 @@ display:
             'entity:node':
               pizza: teaser
       fields:
-        tid:
-          table: search_api_index_pizza
-          field: tid
-          id: tid
-          entity_type: null
-          entity_field: null
-          plugin_id: search_api_field
+        title:
+          id: title
+          table: search_api_datasource_pizza_entity_node
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
@@ -99,7 +105,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -108,8 +114,225 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: number_integer
-          settings: {  }
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
+        field_pizza_image:
+          id: field_pizza_image
+          table: search_api_datasource_pizza_entity_node
+          field: field_pizza_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: medium
+            image_link: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
+        name:
+          id: name
+          table: search_api_index_pizza
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          plugin_id: search_api_field
+        field_prix:
+          id: field_prix
+          table: search_api_datasource_pizza_entity_node
+          field: field_prix
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+            decimal_separator: .
+            scale: 2
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -135,23 +358,40 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-            format_plural_values: {  }
+            format_plural_values:
+              - '1'
+              - '@count'
+          entity_type: node
+          plugin_id: search_api_field
       filters: {  }
       sorts: {  }
       title: 'Liste pizzas'
-      header: {  }
+      header:
+        views_block_area:
+          id: views_block_area
+          table: views
+          field: views_block_area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          block_id: 'facet_block:ingredients'
+          plugin_id: views_block_area
       footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      use_ajax: true
+      use_ajax: false
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - 'user.node_grants:view'
       tags:
+        - 'config:field.storage.node.field_pizza_image'
+        - 'config:field.storage.node.field_prix'
         - 'config:search_api.index.pizza'
   page_1:
     display_plugin: page
@@ -172,7 +412,10 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - 'user.node_grants:view'
       tags:
+        - 'config:field.storage.node.field_pizza_image'
+        - 'config:field.storage.node.field_prix'
         - 'config:search_api.index.pizza'

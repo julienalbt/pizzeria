@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
+use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_form_system_theme_settings_alter() for settings form.
@@ -29,4 +31,15 @@ function pizzeria_theme_form_system_theme_settings_alter(&$form, FormStateInterf
     'bg-white' => t('White'),
     'bg-transparent' => t('Transparent'),
   );
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function pizzeria_theme_preprocess_node__pizza__teaser(&$variables, $hook) {
+  /** @var Node $node */
+  $node = $variables['node'];
+  /** @var File $image */
+  $image = $node->get('field_pizza_image')->entity;
+  $variables['pizza_img'] = file_create_url($image->getFileUri());
 }

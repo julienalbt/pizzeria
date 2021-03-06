@@ -11,6 +11,7 @@
     attach: function(context, settings) {
 
       // Custom code here
+      $('.is-active').parents('li').addClass('is-active');
 
     }
   };

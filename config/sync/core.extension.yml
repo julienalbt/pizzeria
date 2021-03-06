@@ -49,6 +49,7 @@ module:
   tour: 0
   update: 0
   user: 0
+  views_block_area: 0
   views_ui: 0
   content_translation: 10
   views: 10

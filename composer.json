@@ -27,7 +27,8 @@
         "drupal/facets": "^1.7",
         "drupal/search_api": "^1.19",
         "drupal/select2": "^1.13",
-        "drupal/site_settings": "^1.19"
+        "drupal/site_settings": "^1.19",
+        "drupal/views_block_area": "^1.0@beta"
     },
     "conflict": {
         "drupal/drupal": "*"
