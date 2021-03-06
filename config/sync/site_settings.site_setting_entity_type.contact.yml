@@ -1,0 +1,8 @@
+uuid: 0eaf8d90-72ad-4bb9-b82c-31c13813432b
+langcode: fr
+status: true
+dependencies: {  }
+id: contact
+label: Contact
+fieldset: footer
+multiple: false

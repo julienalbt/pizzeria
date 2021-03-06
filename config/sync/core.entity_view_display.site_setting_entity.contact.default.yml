@@ -1,0 +1,45 @@
+uuid: 4f60c758-30b3-431d-9cf5-b5a4e112069e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.contact.field_adresse
+    - field.field.site_setting_entity.contact.field_ouverture
+    - field.field.site_setting_entity.contact.field_telephone
+    - site_settings.site_setting_entity_type.contact
+  module:
+    - telephone
+id: site_setting_entity.contact.default
+targetEntityType: site_setting_entity
+bundle: contact
+mode: default
+content:
+  field_adresse:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ouverture:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_telephone:
+    weight: 0
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+hidden:
+  fieldset: true
+  name: true
+  search_api_excerpt: true
+  user_id: true

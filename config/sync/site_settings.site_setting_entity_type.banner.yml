@@ -1,0 +1,8 @@
+uuid: f3d7622a-daf7-4516-860f-a55aafca7450
+langcode: fr
+status: true
+dependencies: {  }
+id: banner
+label: banner
+fieldset: header
+multiple: false

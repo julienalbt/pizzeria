@@ -1,0 +1,8 @@
+uuid: ba56b0b0-80d0-48a0-94c0-8bd5ba7d254b
+langcode: fr
+status: true
+dependencies: {  }
+id: background
+label: Background
+fieldset: footer
+multiple: false

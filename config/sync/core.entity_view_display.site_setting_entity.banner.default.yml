@@ -1,0 +1,27 @@
+uuid: 20b97b52-eb3f-41f5-baae-4d5be02318d5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.banner.field_banner
+    - site_settings.site_setting_entity_type.banner
+  module:
+    - image
+id: site_setting_entity.banner.default
+targetEntityType: site_setting_entity
+bundle: banner
+mode: default
+content:
+  field_banner:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+hidden:
+  fieldset: true
+  name: true
+  search_api_excerpt: true
+  user_id: true

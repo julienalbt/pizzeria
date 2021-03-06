@@ -1,0 +1,73 @@
+uuid: 3dc6795f-edf1-4874-be4a-55e28a673f45
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.contact.field_adresse
+    - field.field.site_setting_entity.contact.field_ouverture
+    - field.field.site_setting_entity.contact.field_telephone
+    - site_settings.site_setting_entity_type.contact
+  module:
+    - telephone
+id: site_setting_entity.contact.default
+targetEntityType: site_setting_entity
+bundle: contact
+mode: default
+content:
+  field_adresse:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ouverture:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_telephone:
+    weight: 11
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  fieldset:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 10
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

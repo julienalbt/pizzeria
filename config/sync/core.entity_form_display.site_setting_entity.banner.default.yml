@@ -1,0 +1,57 @@
+uuid: b7845531-fe8b-4d21-80f0-be2c640b4086
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.banner.field_banner
+    - image.style.thumbnail
+    - site_settings.site_setting_entity_type.banner
+  module:
+    - image
+id: site_setting_entity.banner.default
+targetEntityType: site_setting_entity
+bundle: banner
+mode: default
+content:
+  field_banner:
+    weight: 11
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  fieldset:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 10
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

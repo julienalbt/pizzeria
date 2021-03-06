@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 use Drupal\file\Entity\File;
 use Drupal\node\Entity\Node;
 
@@ -15,22 +16,22 @@ use Drupal\node\Entity\Node;
  * Replace Barrio setting options with subtheme ones.
  */
 function pizzeria_theme_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
-  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = [
     'bg-primary' => t('Primary'),
     'bg-secondary' => t('Secondary'),
     'bg-light' => t('Light'),
     'bg-dark' => t('Dark'),
     'bg-white' => t('White'),
     'bg-transparent' => t('Transparent'),
-  );
-  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
+  ];
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = [
     'bg-primary' => t('Primary'),
     'bg-secondary' => t('Secondary'),
     'bg-light' => t('Light'),
     'bg-dark' => t('Dark'),
     'bg-white' => t('White'),
     'bg-transparent' => t('Transparent'),
-  );
+  ];
 }
 
 /**
@@ -42,4 +43,18 @@ function pizzeria_theme_preprocess_node__pizza__teaser(&$variables, $hook) {
   /** @var File $image */
   $image = $node->get('field_pizza_image')->entity;
   $variables['pizza_img'] = file_create_url($image->getFileUri());
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function pizzeria_theme_preprocess_page__front(&$variables, $hook) {
+  $site_settings = \Drupal::service('site_settings.loader');
+  $header = $site_settings->loadByFieldset('header');
+  $footer = $site_settings->loadByFieldset('footer');
+  $bannerUri = $header['banner']['uri'];
+  $footerUri = $footer['background']['uri'];
+
+  $variables['banner_img'] = Url::fromUri(file_create_url($bannerUri));
+  $variables['footer_img'] = Url::fromUri(file_create_url($footerUri));
 }

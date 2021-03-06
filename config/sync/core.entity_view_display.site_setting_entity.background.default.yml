@@ -1,0 +1,27 @@
+uuid: 2a8e15ae-632f-4e34-a361-6471984c8070
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.background.field_footer_background
+    - site_settings.site_setting_entity_type.background
+  module:
+    - image
+id: site_setting_entity.background.default
+targetEntityType: site_setting_entity
+bundle: background
+mode: default
+content:
+  field_footer_background:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+hidden:
+  fieldset: true
+  name: true
+  search_api_excerpt: true
+  user_id: true
