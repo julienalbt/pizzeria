@@ -2,6 +2,14 @@
 CUSTOM STYLE
 */
 
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body {
+  background: #f9f9f9;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+}
+
 .main-content.col {
   padding: 0;
 }
@@ -30,7 +38,7 @@ CUSTOM STYLE
 
   .contact {
     padding: 20px;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(4px);
 
     p {
@@ -44,7 +52,7 @@ CUSTOM STYLE
   padding: 0 15px;
 
   .view-header {
-    .block-facet-blockingredients {
+    .block-facet-blockbase-pizza {
       max-width: 1275px;
       margin: 50px auto auto;
 
@@ -53,7 +61,7 @@ CUSTOM STYLE
           list-style: none;
           display: flex;
           flex-wrap: wrap;
-          justify-content: flex-start;
+          justify-content: center;
           margin-block-start: 0 !important;
           margin-block-end: 0 !important;
           padding-inline-start: 0 !important;
@@ -65,18 +73,30 @@ CUSTOM STYLE
             width: 135px;
             height: 50px;
             border-radius: 5px;
-            background-color: $accent-shade;
+            background-color: rgba(0,0,0,.9);
             margin-right: 10px;
             margin-bottom: 10px;
             cursor: pointer;
             transition: 0.5s ease-in;
 
             &:hover {
-              background-color: $accent-dark;
+              background: linear-gradient(
+                  45deg,
+                  rgba(29, 236, 197, 0.5),
+                  rgba(91, 14, 214, 0.5) 100%
+              );
+
+              a {
+                color: black;
+              }
             }
 
             &.is-active {
-              background-color: $accent-dark;
+              background: linear-gradient(
+                  45deg,
+                  rgba(29, 236, 197, 0.5),
+                  rgba(91, 14, 214, 0.5) 100%
+              );
             }
 
             a {
@@ -120,22 +140,31 @@ CUSTOM STYLE
     margin: 0;
 
     .card {
-      min-height: 380px;
+      cursor: pointer;
 
-      .card-body {
-        padding: 0.8rem;
-
-        h2 {
-          padding-top: 0;
-        }
-
-        p {
-          margin-bottom: 0;
-        }
+      .content-details {
+        background: linear-gradient(
+            45deg,
+            rgba(29, 236, 197, 0.5),
+            rgba(91, 14, 214, 0.5) 100%
+        );
+        backdrop-filter: blur(4px);
+        transition: .4s ease-in;
+        opacity: 0;
+        position: absolute;
+        text-align: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        padding: 5px;
       }
 
-      .card-footer {
-        padding: 0.2rem;
+      &:hover .content-details {
+        opacity: 1;
       }
     }
   }

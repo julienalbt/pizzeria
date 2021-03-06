@@ -1,4 +1,4 @@
-uuid: 63ba06ef-c21f-42d1-b866-0dbc3ee8de67
+uuid: ee583b88-8e75-49a1-be33-87b67e5fd19c
 langcode: fr
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
     - views.view.liste_pizzas
   module:
     - search_api
-id: ingredients
-name: Ingrédients
-url_alias: ingredients
+id: base_pizza
+name: 'Base pizza'
+url_alias: base_pizza
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: name
+field_identifier: field_base_pizza
 facet_source_id: 'search_api:views_page__liste_pizzas__page_1'
 widget:
   type: links
@@ -40,6 +40,11 @@ processor_configs:
       sort: 40
     settings:
       sort: ASC
+  list_item:
+    processor_id: list_item
+    weights:
+      build: 5
+    settings: {  }
   url_processor_handler:
     processor_id: url_processor_handler
     weights:
@@ -48,4 +53,4 @@ processor_configs:
     settings: {  }
 empty_behavior:
   behavior: none
-show_title: true
+show_title: false

@@ -61,8 +61,7 @@
 #}
 {{ attach_library('bootstrap_barrio/node') }}
 
-{%
-  set classes = [
+{% set classes = [
   'node',
   'node--type-' ~ node.bundle|clean_class,
   node.isPromoted() ? 'node--promoted',
@@ -70,24 +69,21 @@
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   'clearfix',
-]
-%}
+] %}
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
 
     <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="{{ pizza_img }}" alt="Card image cap" />
-      <div class="card-body">
-        <h2>{{ label }}</h2>
-        <p>
+      <img class="card-img-top" src="{{ pizza_img }}" alt="Card image cap"/>
+      <div class="content-details">
+        <h3 class="content-title">{{ label }}</h3>
+        <p class="content-text">
           {% for item in node.field_ingredients %}
             <span>{{- item.entity.name.value -}}</span>
             {{- not loop.last ? ',' -}}
           {% endfor %}
         </p>
-      </div>
-      <div class="card-footer d-flex justify-content-end">
-        {{ content.field_prix }}
+        <small>{{ content.field_prix }}</small>
       </div>
     </div>
   </div>

@@ -3,10 +3,9 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - field.storage.node.field_ingredients
+    - field.storage.node.field_base_pizza
     - search_api.server.default
   module:
-    - taxonomy
     - search_api
     - node
 id: pizza
@@ -14,16 +13,14 @@ name: Pizza
 description: ''
 read_only: false
 field_settings:
-  name:
-    label: 'Ingrédients » Terme de taxonomie » Nom'
+  field_base_pizza:
+    label: 'Base pizza'
     datasource_id: 'entity:node'
-    property_path: 'field_ingredients:entity:name'
+    property_path: field_base_pizza
     type: string
     dependencies:
       config:
-        - field.storage.node.field_ingredients
-      module:
-        - taxonomy
+        - field.storage.node.field_base_pizza
 datasource_settings:
   'entity:node':
     bundles:
