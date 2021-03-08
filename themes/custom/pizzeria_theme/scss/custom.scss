@@ -13,6 +13,11 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+.navbar {
+  background-color: rgba(0,0,0,0.4) !important;
+  backdrop-filter: blur(5px);
+}
+
 .navbar-dark .navbar-nav .nav-link {
   color: white;
 }
