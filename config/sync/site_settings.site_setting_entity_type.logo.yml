@@ -1,0 +1,8 @@
+uuid: 3d99dd9c-d50e-4d6d-be2a-f01f93327da0
+langcode: fr
+status: true
+dependencies: {  }
+id: logo
+label: Logo
+fieldset: header
+multiple: false

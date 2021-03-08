@@ -54,7 +54,9 @@ function pizzeria_theme_preprocess_page__front(&$variables, $hook) {
   $footer = $site_settings->loadByFieldset('footer');
   $bannerUri = $header['banner']['uri'];
   $footerUri = $footer['background']['uri'];
+  $logoUri = $header['logo']['uri'];
 
   $variables['banner_img'] = Url::fromUri(file_create_url($bannerUri));
   $variables['footer_img'] = Url::fromUri(file_create_url($footerUri));
+  $variables['logo_img'] = Url::fromUri(file_create_url($logoUri));
 }

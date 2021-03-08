@@ -35,6 +35,14 @@ body {
   height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .site-logo {
+    width: 350px;
+    opacity: 0.8;
+  }
 }
 
 .footer {
