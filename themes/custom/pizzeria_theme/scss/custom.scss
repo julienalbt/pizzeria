@@ -5,9 +5,12 @@ CUSTOM STYLE
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
 body {
-  background: #f9f9f9;
   font-size: 16px;
   font-family: 'Raleway', sans-serif;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
 }
 
 .main-content.col {
@@ -23,7 +26,6 @@ body {
   height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
 }
 
 .footer {
@@ -73,29 +75,29 @@ body {
             width: 135px;
             height: 50px;
             border-radius: 5px;
-            background-color: rgba(0,0,0,.9);
             margin-right: 10px;
             margin-bottom: 10px;
             cursor: pointer;
             transition: 0.5s ease-in;
+            background-color: rgba(0, 0, 0, 0.5);
 
             &:hover {
               background: linear-gradient(
                   45deg,
-                  rgba(29, 236, 197, 0.5),
-                  rgba(91, 14, 214, 0.5) 100%
+                  rgba(29, 236, 197, 0.8),
+                  rgba(91, 14, 214, 0.8) 100%
               );
 
               a {
-                color: black;
+                color: white;
               }
             }
 
             &.is-active {
               background: linear-gradient(
                   45deg,
-                  rgba(29, 236, 197, 0.5),
-                  rgba(91, 14, 214, 0.5) 100%
+                  rgba(29, 236, 197, 0.8),
+                  rgba(91, 14, 214, 0.8) 100%
               );
             }
 
@@ -141,6 +143,18 @@ body {
 
     .card {
       cursor: pointer;
+      border: none;
+      height: 200px;
+      justify-content: center;
+      background-color: transparent;
+
+      .plan-1 {
+        padding-top: 20px;
+      }
+
+      .card-title {
+        text-align: right;
+      }
 
       .content-details {
         background: linear-gradient(
@@ -161,6 +175,7 @@ body {
         height: 100%;
         width: 100%;
         padding: 5px;
+        border-radius: 4px;
       }
 
       &:hover .content-details {

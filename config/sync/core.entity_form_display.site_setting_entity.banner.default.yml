@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.site_setting_entity.banner.field_banner
-    - image.style.thumbnail
+    - image.style.crop_thumbnail
     - site_settings.site_setting_entity_type.banner
   module:
     - image
@@ -16,8 +16,8 @@ content:
   field_banner:
     weight: 11
     settings:
+      preview_image_style: crop_thumbnail
       progress_indicator: throbber
-      preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
