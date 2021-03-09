@@ -48,7 +48,7 @@ function pizzeria_theme_preprocess_node__pizza__teaser(&$variables, $hook) {
 /**
  * Implements hook_preprocess().
  */
-function pizzeria_theme_preprocess_page__front(&$variables, $hook) {
+function pizzeria_theme_preprocess_page(&$variables, $hook) {
   $site_settings = \Drupal::service('site_settings.loader');
   $header = $site_settings->loadByFieldset('header');
   $footer = $site_settings->loadByFieldset('footer');
